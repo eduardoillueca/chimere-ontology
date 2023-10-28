@@ -1,0 +1,271 @@
+Prefix(:=<http://www.semanticweb.org/hopu/ontologies/2023/1/untitled-ontology-7#>)
+Prefix(owl:=<http://www.w3.org/2002/07/owl#>)
+Prefix(rdf:=<http://www.w3.org/1999/02/22-rdf-syntax-ns#>)
+Prefix(xml:=<http://www.w3.org/XML/1998/namespace>)
+Prefix(xsd:=<http://www.w3.org/2001/XMLSchema#>)
+Prefix(rdfs:=<http://www.w3.org/2000/01/rdf-schema#>)
+
+
+Ontology(<http://www.semanticweb.org/hopu/chimere>
+Annotation(<http://purl.org/dc/terms/description> "Ontology describing the entities required to represent a CHIMERE simulation for a timestamp and a municipality (short version)")
+Annotation(<http://purl.org/dc/terms/license> "http://www.w3.org/Consortium/Legal/2015/copyright-software-and-document")
+Annotation(<http://purl.org/dc/terms/title> "CHIMERE Ontology")
+
+Declaration(Class(<http://edamontology.org/data_2140>))
+Declaration(Class(<http://purl.obolibrary.org/obo/APOLLO_SV_00000070>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CHEBI_16134>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CHEBI_16183>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CHEBI_17245>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CHEBI_18422>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CHEBI_23367>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CHEBI_24431>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CHEBI_24835>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CHEBI_25812>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CHEBI_33101>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CHEBI_33259>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CHEBI_35196>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CHEBI_50803>))
+Declaration(Class(<http://purl.obolibrary.org/obo/CHEBI_72695>))
+Declaration(Class(<http://purl.obolibrary.org/obo/PATO_0001025>))
+Declaration(Class(<https://smartdatamodels.org/dateObserved>))
+Declaration(Class(<https://smartdatamodels.org/dataModel.Environment/AirQualityForecast>))
+Declaration(Class(<https://smartdatamodels.org/dataModel.Environment/airQualityIndex>))
+Declaration(Class(<https://smartdatamodels.org/dataModel.Environment/pm10>))
+Declaration(Class(<https://smartdatamodels.org/dataModel.Environment/pm25>))
+Declaration(Class(<https://smartdatamodels.org/dataModel.Environment/temperature>))
+Declaration(ObjectProperty(<http://www.semanticweb.org/hopu/chimere#hasAirQualityIndex>))
+Declaration(ObjectProperty(<http://www.semanticweb.org/hopu/chimere#hasChemicalEntity>))
+Declaration(ObjectProperty(<http://www.semanticweb.org/hopu/chimere#hasConcentration>))
+Declaration(ObjectProperty(<http://www.semanticweb.org/hopu/chimere#hasForecast>))
+Declaration(ObjectProperty(<http://www.semanticweb.org/hopu/chimere#hasMunicipality>))
+Declaration(ObjectProperty(<http://www.semanticweb.org/hopu/chimere#hasPressure>))
+Declaration(ObjectProperty(<http://www.semanticweb.org/hopu/chimere#hasTemperature>))
+Declaration(ObjectProperty(<http://www.semanticweb.org/hopu/chimere#hasTimestamp>))
+Declaration(ObjectProperty(<http://www.semanticweb.org/hopu/chimere#hasUnit>))
+Declaration(ObjectProperty(<http://www.semanticweb.org/hopu/chimere#hasValue>))
+Declaration(ObjectProperty(<http://www.semanticweb.org/hopu/chimere#isResultOf>))
+Declaration(AnnotationProperty(<http://purl.obolibrary.org/obo/IAO_0000115>))
+Declaration(AnnotationProperty(<http://purl.org/dc/terms/description>))
+Declaration(AnnotationProperty(<http://purl.org/dc/terms/license>))
+Declaration(AnnotationProperty(<http://purl.org/dc/terms/title>))
+
+############################
+#   Object Properties
+############################
+
+# Object Property: <http://www.semanticweb.org/hopu/chimere#hasAirQualityIndex> (hasAirQualityIndex)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://www.semanticweb.org/hopu/chimere#hasAirQualityIndex> "hasAirQualityIndex")
+AnnotationAssertion(rdfs:label <http://www.semanticweb.org/hopu/chimere#hasAirQualityIndex> "hasAirQualityIndex")
+ObjectPropertyDomain(<http://www.semanticweb.org/hopu/chimere#hasAirQualityIndex> <https://smartdatamodels.org/dataModel.Environment/AirQualityForecast>)
+ObjectPropertyRange(<http://www.semanticweb.org/hopu/chimere#hasAirQualityIndex> <https://smartdatamodels.org/dataModel.Environment/airQualityIndex>)
+
+# Object Property: <http://www.semanticweb.org/hopu/chimere#hasChemicalEntity> (hasChemicalEntity)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://www.semanticweb.org/hopu/chimere#hasChemicalEntity> "hasChemicalEntity")
+AnnotationAssertion(rdfs:label <http://www.semanticweb.org/hopu/chimere#hasChemicalEntity> "hasChemicalEntity")
+ObjectPropertyDomain(<http://www.semanticweb.org/hopu/chimere#hasChemicalEntity> <http://edamontology.org/data_2140>)
+ObjectPropertyRange(<http://www.semanticweb.org/hopu/chimere#hasChemicalEntity> <http://purl.obolibrary.org/obo/CHEBI_24431>)
+
+# Object Property: <http://www.semanticweb.org/hopu/chimere#hasConcentration> (hasConcentration)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://www.semanticweb.org/hopu/chimere#hasConcentration> "hasConcentration")
+AnnotationAssertion(rdfs:label <http://www.semanticweb.org/hopu/chimere#hasConcentration> "hasConcentration")
+ObjectPropertyDomain(<http://www.semanticweb.org/hopu/chimere#hasConcentration> <https://smartdatamodels.org/dataModel.Environment/AirQualityForecast>)
+ObjectPropertyRange(<http://www.semanticweb.org/hopu/chimere#hasConcentration> <http://edamontology.org/data_2140>)
+
+# Object Property: <http://www.semanticweb.org/hopu/chimere#hasForecast> (hasForecast)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://www.semanticweb.org/hopu/chimere#hasForecast> "hasForecast")
+AnnotationAssertion(rdfs:label <http://www.semanticweb.org/hopu/chimere#hasForecast> "hasForecast")
+ObjectPropertyDomain(<http://www.semanticweb.org/hopu/chimere#hasForecast> <http://purl.obolibrary.org/obo/APOLLO_SV_00000070>)
+ObjectPropertyRange(<http://www.semanticweb.org/hopu/chimere#hasForecast> <https://smartdatamodels.org/dataModel.Environment/AirQualityForecast>)
+
+# Object Property: <http://www.semanticweb.org/hopu/chimere#hasMunicipality> (hasMunicipality)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://www.semanticweb.org/hopu/chimere#hasMunicipality> "hasMunicipality")
+AnnotationAssertion(rdfs:label <http://www.semanticweb.org/hopu/chimere#hasMunicipality> "hasMunicipality")
+ObjectPropertyDomain(<http://www.semanticweb.org/hopu/chimere#hasMunicipality> <https://smartdatamodels.org/dataModel.Environment/AirQualityForecast>)
+ObjectPropertyRange(<http://www.semanticweb.org/hopu/chimere#hasMunicipality> DataSomeValuesFrom(owl:topDataProperty xsd:string))
+
+# Object Property: <http://www.semanticweb.org/hopu/chimere#hasPressure> (hasPressure)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://www.semanticweb.org/hopu/chimere#hasPressure> "hasPressure")
+AnnotationAssertion(rdfs:label <http://www.semanticweb.org/hopu/chimere#hasPressure> "hasPressure")
+ObjectPropertyDomain(<http://www.semanticweb.org/hopu/chimere#hasPressure> <https://smartdatamodels.org/dataModel.Environment/AirQualityForecast>)
+ObjectPropertyRange(<http://www.semanticweb.org/hopu/chimere#hasPressure> <http://purl.obolibrary.org/obo/PATO_0001025>)
+
+# Object Property: <http://www.semanticweb.org/hopu/chimere#hasTemperature> (hasTemperature)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://www.semanticweb.org/hopu/chimere#hasTemperature> "hasTemperature")
+AnnotationAssertion(rdfs:label <http://www.semanticweb.org/hopu/chimere#hasTemperature> "hasTemperature")
+ObjectPropertyDomain(<http://www.semanticweb.org/hopu/chimere#hasTemperature> <https://smartdatamodels.org/dataModel.Environment/AirQualityForecast>)
+ObjectPropertyRange(<http://www.semanticweb.org/hopu/chimere#hasTemperature> <https://smartdatamodels.org/dataModel.Environment/temperature>)
+
+# Object Property: <http://www.semanticweb.org/hopu/chimere#hasTimestamp> (hasTimestamp)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://www.semanticweb.org/hopu/chimere#hasTimestamp> "hasTimestamp")
+AnnotationAssertion(rdfs:label <http://www.semanticweb.org/hopu/chimere#hasTimestamp> "hasTimestamp")
+ObjectPropertyDomain(<http://www.semanticweb.org/hopu/chimere#hasTimestamp> <https://smartdatamodels.org/dataModel.Environment/AirQualityForecast>)
+ObjectPropertyRange(<http://www.semanticweb.org/hopu/chimere#hasTimestamp> DataSomeValuesFrom(owl:topDataProperty xsd:int))
+
+# Object Property: <http://www.semanticweb.org/hopu/chimere#hasUnit> (hasUnit)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://www.semanticweb.org/hopu/chimere#hasUnit> "hasUnit")
+AnnotationAssertion(rdfs:label <http://www.semanticweb.org/hopu/chimere#hasUnit> "hasUnit")
+ObjectPropertyDomain(<http://www.semanticweb.org/hopu/chimere#hasUnit> <http://edamontology.org/data_2140>)
+ObjectPropertyDomain(<http://www.semanticweb.org/hopu/chimere#hasUnit> <http://purl.obolibrary.org/obo/PATO_0001025>)
+ObjectPropertyDomain(<http://www.semanticweb.org/hopu/chimere#hasUnit> <https://smartdatamodels.org/dataModel.Environment/temperature>)
+ObjectPropertyRange(<http://www.semanticweb.org/hopu/chimere#hasUnit> DataSomeValuesFrom(owl:topDataProperty xsd:string))
+
+# Object Property: <http://www.semanticweb.org/hopu/chimere#hasValue> (hasValue)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://www.semanticweb.org/hopu/chimere#hasValue> "hasValue")
+AnnotationAssertion(rdfs:label <http://www.semanticweb.org/hopu/chimere#hasValue> "hasValue")
+ObjectPropertyDomain(<http://www.semanticweb.org/hopu/chimere#hasValue> <http://edamontology.org/data_2140>)
+ObjectPropertyRange(<http://www.semanticweb.org/hopu/chimere#hasValue> DataSomeValuesFrom(owl:topDataProperty xsd:float))
+
+# Object Property: <http://www.semanticweb.org/hopu/chimere#isResultOf> (isResultOf)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://www.semanticweb.org/hopu/chimere#isResultOf> "isResultOf")
+AnnotationAssertion(rdfs:label <http://www.semanticweb.org/hopu/chimere#isResultOf> "isResultOf")
+ObjectPropertyDomain(<http://www.semanticweb.org/hopu/chimere#isResultOf> <http://edamontology.org/data_2140>)
+ObjectPropertyDomain(<http://www.semanticweb.org/hopu/chimere#isResultOf> <http://purl.obolibrary.org/obo/APOLLO_SV_00000070>)
+ObjectPropertyDomain(<http://www.semanticweb.org/hopu/chimere#isResultOf> <http://purl.obolibrary.org/obo/PATO_0001025>)
+ObjectPropertyDomain(<http://www.semanticweb.org/hopu/chimere#isResultOf> <https://smartdatamodels.org/dataModel.Environment/temperature>)
+ObjectPropertyRange(<http://www.semanticweb.org/hopu/chimere#isResultOf> <http://purl.obolibrary.org/obo/APOLLO_SV_00000070>)
+ObjectPropertyRange(<http://www.semanticweb.org/hopu/chimere#isResultOf> <https://smartdatamodels.org/dataModel.Environment/AirQualityForecast>)
+
+
+
+
+############################
+#   Classes
+############################
+
+# Class: <http://edamontology.org/data_2140> (concentration)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://edamontology.org/data_2140> "The concentration of a chemical compound.")
+AnnotationAssertion(rdfs:label <http://edamontology.org/data_2140> "concentration")
+
+# Class: <http://purl.obolibrary.org/obo/APOLLO_SV_00000070> (simulation)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/APOLLO_SV_00000070> "A purely intentional entity that simulates an entity and its properties.")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/APOLLO_SV_00000070> "simulation")
+
+# Class: <http://purl.obolibrary.org/obo/CHEBI_16134> (ammonia)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/CHEBI_16134> "An azane that consists of a single nitrogen atom covelently bonded to three hydrogen atoms.")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CHEBI_16134> "ammonia")
+SubClassOf(<http://purl.obolibrary.org/obo/CHEBI_16134> <http://purl.obolibrary.org/obo/CHEBI_24835>)
+
+# Class: <http://purl.obolibrary.org/obo/CHEBI_16183> (methane)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/CHEBI_16183> "A one-carbon compound in which the carbon is attached by single bonds to four hydrogen atoms. It is a colourless, odourless, non-toxic but flammable gas (b.p. −161°C).")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CHEBI_16183> "methane")
+SubClassOf(<http://purl.obolibrary.org/obo/CHEBI_16183> <http://purl.obolibrary.org/obo/CHEBI_24835>)
+
+# Class: <http://purl.obolibrary.org/obo/CHEBI_17245> (carbon monoxide)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/CHEBI_17245> "A one-carbon compound in which the carbon is joined only to a single oxygen. It is a colourless, odourless, tasteless, toxic gas.")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CHEBI_17245> "carbon monoxide")
+SubClassOf(<http://purl.obolibrary.org/obo/CHEBI_17245> <http://purl.obolibrary.org/obo/CHEBI_72695>)
+
+# Class: <http://purl.obolibrary.org/obo/CHEBI_18422> (sulfur dioxide)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/CHEBI_18422> "A sulphur oxide composed by one sulphur atom and one oxygen atom.")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CHEBI_18422> "sulfur dioxide")
+SubClassOf(<http://purl.obolibrary.org/obo/CHEBI_18422> <http://purl.obolibrary.org/obo/CHEBI_24835>)
+
+# Class: <http://purl.obolibrary.org/obo/CHEBI_23367> (molecular entity)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/CHEBI_23367> "Any constitutionally or isotopically distinct atom, molecule, ion, ion pair, radical, radical ion, complex, conformer etc., identifiable as a separately distinguishable entity.")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CHEBI_23367> "molecular entity")
+SubClassOf(<http://purl.obolibrary.org/obo/CHEBI_23367> <http://purl.obolibrary.org/obo/CHEBI_24431>)
+
+# Class: <http://purl.obolibrary.org/obo/CHEBI_24431> (chemical entity)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/CHEBI_24431> "A chemical entity is a physical entity of interest in chemistry including molecular entities, parts thereof, and chemical substances.")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CHEBI_24431> "chemical entity")
+
+# Class: <http://purl.obolibrary.org/obo/CHEBI_24835> (inorganic molecular entity)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/CHEBI_24835> "A molecular entity that contains no carbon.")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CHEBI_24835> "inorganic molecular entity")
+SubClassOf(<http://purl.obolibrary.org/obo/CHEBI_24835> <http://purl.obolibrary.org/obo/CHEBI_23367>)
+
+# Class: <http://purl.obolibrary.org/obo/CHEBI_25812> (ozone)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/CHEBI_25812> "An elemental molecule with formula O3. An explosive, pale blue gas (b.p. −112°C) that has a characteristic, pungent odour, it is continuously produced in the upper atmosphere by the action of solar ultraviolet radiation on atmospheric oxygen. It is an antimicrobial agent used in the production of bottled water, as well as in the treatment of meat, poultry and other foodstuffs.")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CHEBI_25812> "ozone")
+SubClassOf(<http://purl.obolibrary.org/obo/CHEBI_25812> <http://purl.obolibrary.org/obo/CHEBI_33259>)
+
+# Class: <http://purl.obolibrary.org/obo/CHEBI_33101> (nitrogen dioxide)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/CHEBI_33101> "A nitrogen oxide composed by one nitrogen atom and two oxygen atom.")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CHEBI_33101> "nitrogen dioxide")
+SubClassOf(<http://purl.obolibrary.org/obo/CHEBI_33101> <http://purl.obolibrary.org/obo/CHEBI_24835>)
+
+# Class: <http://purl.obolibrary.org/obo/CHEBI_33259> (elemental molecular entity)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/CHEBI_33259> "A molecular entity all atoms of which have the same atomic number.")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CHEBI_33259> "elemental molecular entity")
+SubClassOf(<http://purl.obolibrary.org/obo/CHEBI_33259> <http://purl.obolibrary.org/obo/CHEBI_23367>)
+
+# Class: <http://purl.obolibrary.org/obo/CHEBI_35196> (nitrogen oxide)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/CHEBI_35196> "A nitrogen oxide composed by one nitrogen atom and one oxygen atom.")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CHEBI_35196> "nitrogen oxide")
+SubClassOf(<http://purl.obolibrary.org/obo/CHEBI_35196> <http://purl.obolibrary.org/obo/CHEBI_24835>)
+
+# Class: <http://purl.obolibrary.org/obo/CHEBI_50803> (nanoparticle)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/CHEBI_50803> "A nanosized spherical or capsule-shaped structure.")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CHEBI_50803> "nanoparticle")
+SubClassOf(<http://purl.obolibrary.org/obo/CHEBI_50803> <http://purl.obolibrary.org/obo/CHEBI_24431>)
+
+# Class: <http://purl.obolibrary.org/obo/CHEBI_72695> (organic molecule)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/CHEBI_72695> "Any molecule that consists of at least one carbon atom as part of the electrically neutral entity.")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/CHEBI_72695> "organic molecule")
+SubClassOf(<http://purl.obolibrary.org/obo/CHEBI_72695> <http://purl.obolibrary.org/obo/CHEBI_23367>)
+
+# Class: <http://purl.obolibrary.org/obo/PATO_0001025> (pressure)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <http://purl.obolibrary.org/obo/PATO_0001025> "A physical quality that inheres in a bearer by virtue of the bearer's amount of force per unit area it exerts.")
+AnnotationAssertion(rdfs:label <http://purl.obolibrary.org/obo/PATO_0001025> "pressure")
+
+# Class: <https://smartdatamodels.org/dateObserved> (date)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://smartdatamodels.org/dateObserved> "The date and time of this observation represented by an ISO8601 interval. There are alternatives descriptions in other data models, please check it below if it fits you needs")
+AnnotationAssertion(rdfs:label <https://smartdatamodels.org/dateObserved> "date")
+
+# Class: <https://smartdatamodels.org/dataModel.Environment/AirQualityForecast> (air quality forecast)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://smartdatamodels.org/dataModel.Environment/AirQualityForecast> "A forecast of air quality conditions valid during a period.")
+AnnotationAssertion(rdfs:label <https://smartdatamodels.org/dataModel.Environment/AirQualityForecast> "air quality forecast")
+
+# Class: <https://smartdatamodels.org/dataModel.Environment/airQualityIndex> (air quality index)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://smartdatamodels.org/dataModel.Environment/airQualityIndex> "Air quality index is a number used to report the quality of the air on any given day.")
+AnnotationAssertion(rdfs:label <https://smartdatamodels.org/dataModel.Environment/airQualityIndex> "air quality index")
+
+# Class: <https://smartdatamodels.org/dataModel.Environment/pm10> (PM10)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://smartdatamodels.org/dataModel.Environment/pm10> "Particulate matter 10 micrometers or less in diameter")
+AnnotationAssertion(rdfs:label <https://smartdatamodels.org/dataModel.Environment/pm10> "PM10")
+SubClassOf(<https://smartdatamodels.org/dataModel.Environment/pm10> <http://purl.obolibrary.org/obo/CHEBI_50803>)
+
+# Class: <https://smartdatamodels.org/dataModel.Environment/pm25> (PM2.5)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://smartdatamodels.org/dataModel.Environment/pm25> "Particulate matter 2.5 micrometers or less in diameter")
+AnnotationAssertion(rdfs:label <https://smartdatamodels.org/dataModel.Environment/pm25> "PM2.5")
+SubClassOf(<https://smartdatamodels.org/dataModel.Environment/pm25> <https://smartdatamodels.org/dataModel.Environment/pm10>)
+
+# Class: <https://smartdatamodels.org/dataModel.Environment/temperature> (temperature)
+
+AnnotationAssertion(<http://purl.obolibrary.org/obo/IAO_0000115> <https://smartdatamodels.org/dataModel.Environment/temperature> "Measured temperature.")
+AnnotationAssertion(rdfs:label <https://smartdatamodels.org/dataModel.Environment/temperature> "temperature")
+
+
+)
