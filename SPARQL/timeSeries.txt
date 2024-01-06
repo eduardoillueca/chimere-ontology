@@ -1,0 +1,16 @@
+PREFIX Entities: <https://raw.githubusercontent.com/eduardoillueca/chimere-ontology/main/Entities/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX chimere-ontology.owl: <https://raw.githubusercontent.com/eduardoillueca/chimere-ontology/main/Ontology/chimere-ontology.owl#>
+
+SELECT  
+	   (SUM(xsd:integer(if(regex(str(?chemical), "pm10")  && ?value > 15 ,1,0))) AS ?pm10)
+	   (SUM(xsd:integer(if(regex(str(?chemical), "pm25")  && ?value > 10 ,1,0))) AS ?pm25)
+       (SUM(xsd:integer(if(regex(str(?chemical), "33101") && ?value > 10 ,1,0))) AS ?no2) WHERE { 
+    ?forecast chimere-ontology.owl:hasMunicipality ?municipality .
+    ?forecast chimere-ontology.owl:hasTimestamp ?date .
+    ?forecast Entities:hasConcentration ?concentration .
+    ?concentration Entities:hasChemicalEntity ?chemical .
+    ?chemical chimere-ontology.owl:hasValue ?value 
+    FILTER (?municipality = "Cartagena")
+    FILTER (?date > "1703570400000"^^xsd:float && ?date < "1703743200000"^^xsd:float)
+}

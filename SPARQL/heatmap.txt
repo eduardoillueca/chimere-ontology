@@ -1,0 +1,15 @@
+PREFIX Entities: <https://raw.githubusercontent.com/eduardoillueca/chimere-ontology/main/Entities/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX chimere-ontology.owl: <https://raw.githubusercontent.com/eduardoillueca/chimere-ontology/main/Ontology/chimere-ontology.owl#>
+
+SELECT ?municipality ?chemical ?value WHERE {
+    
+    ?forecast chimere-ontology.owl:hasMunicipality ?municipality .
+    ?forecast chimere-ontology.owl:hasTimestamp ?date .
+    ?forecast Entities:hasConcentration ?concentration .
+    ?concentration Entities:hasChemicalEntity ?chemical .
+    ?chemical chimere-ontology.owl:hasValue ?value
+    
+    FILTER (?date = "1703570400000"^^xsd:decimal)
+    FILTER regex(str(?chemical), "16134")
+}

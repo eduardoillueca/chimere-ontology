@@ -1,0 +1,116 @@
+PREFIX Entities: <https://raw.githubusercontent.com/eduardoillueca/chimere-ontology/main/Entities/>
+PREFIX chimere-ontology.owl: <https://raw.githubusercontent.com/eduardoillueca/chimere-ontology/main/Ontology/chimere-ontology.owl#>
+
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+
+SELECT (IF(?aqi, "Fair", "Good") AS ?label) (COUNT(xsd:integer(?aqi)) AS ?frequency) WHERE {
+    
+    SELECT ?forecast 
+           (MAX(?aqi_pm25) AS ?max_aqi_pm25) 
+           (MAX(?aqi_pm10) AS ?max_aqi_pm10)
+           (MAX(?aqi_no2) AS ?max_aqi_no2)
+           (MAX(?aqi_o3) AS ?max_aqi_o3)
+           (MAX(?aqi_so2) AS ?max_aqi_so2)
+           (IF(?max_aqi_pm25 > ?max_aqi_no2, ?max_aqi_pm25, ?max_aqi_no2) AS ?max_aqi_pm25_no2)
+           (IF(?max_aqi_so2 > MAX(?aqi_pm10), ?max_aqi_so2, MAX(?aqi_pm10)) AS ?max_aqi_pm10_so2)
+           (IF(?max_aqi_pm25_no2 > ?max_aqi_pm10_so2, ?max_aqi_pm25_no2, ?max_aqi_pm10_so2) AS ?aqi)
+
+
+    WHERE {
+        {
+            SELECT  
+               ?forecast
+               (if(regex(str(?chemical), "pm10") && ?value > 0 , ?value, 0) AS ?pm10)
+               (if(regex(str(?chemical), "pm25") && ?value > 0 , ?value, 0) AS ?pm25)
+               (if(regex(str(?chemical), "17245") && ?value > 0 , ?value, 0) AS ?co)
+               (if(regex(str(?chemical), "25812") && ?value > 0 , ?value, 0) AS ?o3)
+               (if(regex(str(?chemical), "33101") && ?value > 0 , ?value, 0) AS ?no2)
+               (if(regex(str(?chemical), "18422") && ?value > 0 , ?value, 0) AS ?so2)
+
+            WHERE { 
+                ?forecast chimere-ontology.owl:hasMunicipality ?municipality .
+                ?forecast chimere-ontology.owl:hasTimestamp ?date .
+                ?forecast Entities:hasConcentration ?concentration .
+                ?concentration Entities:hasChemicalEntity ?chemical .
+                ?chemical chimere-ontology.owl:hasValue ?value 
+                FILTER (?municipality = "Murcia")
+                FILTER (?date > "1703570400000"^^xsd:float && ?date < "1703743200000"^^xsd:float)
+            }
+            GROUP BY ?forecast ?chemical ?value
+        }
+
+        # Calcula AQI para PM2.5
+        BIND (
+            IF(?pm25 <= 10, 0,
+               IF(?pm25 <= 20, 1,
+                  IF(?pm25 <= 25, 2,
+                     IF(?pm25 <= 50, 3,
+                        IF(?pm25 <= 75, 4,
+                           IF(?pm25 <= 800, 5, -1)
+                        )
+                     )
+                  )
+               )
+        ) AS ?aqi_pm25)
+
+        BIND (
+            IF(?pm10 <= 20, 0,
+               IF(?pm10 <= 30, 1,
+                  IF(?pm10 <= 50, 2,
+                     IF(?pm10 <= 100, 3,
+                        IF(?pm10 <= 150, 4,
+                           IF(?pm10 <= 1200, 5, -1)
+                        )
+                     )
+                  )
+               )
+        ) AS ?aqi_pm10)
+
+        BIND (
+            IF(?no2 <= 40, 0,
+               IF(?no2 <= 90, 1,
+                  IF(?no2 <= 120, 2,
+                     IF(?no2 <= 230, 3,
+                        IF(?no2 <= 340, 4,
+                           IF(?no2 <= 1000, 5, -1)
+                        )
+                     )
+                  )
+               )
+        ) AS ?aqi_no2)
+
+        BIND (
+            IF(?o3 <= 50, 0,
+               IF(?o3 <= 100, 1,
+                  IF(?o3 <= 130, 2,
+                     IF(?o3 <= 240, 3,
+                        IF(?o3 <= 380, 4,
+                           IF(?o3 <= 800, 5, -1)
+                        )
+                     )
+                  )
+               )
+        ) AS ?aqi_o3)
+
+        BIND (
+            IF(?so2 <= 100, 0,
+               IF(?so2 <= 200, 1,
+                  IF(?so2 <= 350, 2,
+                     IF(?so2 <= 500, 3,
+                        IF(?so2 <= 750, 4,
+                           IF(?so2 <= 1200, 5, -1)
+                        )
+                     )
+                  )
+               )
+        ) AS ?aqi_so2)
+    
+    
+    }
+
+    GROUP BY ?forecast
+    
+}
+
+GROUP BY ?aqi
+
