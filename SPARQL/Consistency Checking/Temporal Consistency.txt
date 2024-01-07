@@ -1,0 +1,8 @@
+PREFIX Entities: <https://raw.githubusercontent.com/eduardoillueca/chimere-ontology/main/Entities/>
+PREFIX xsd: <http://www.w3.org/2001/XMLSchema#>
+PREFIX chimere-ontology.owl: <https://raw.githubusercontent.com/eduardoillueca/chimere-ontology/main/Ontology/chimere-ontology.owl#>
+select * where { 
+    ?forecast chimere-ontology.owl:hasMunicipality ?municipality .
+    ?forecast chimere-ontology.owl:hasTimestamp ?date
+    FILTER (?municipality = "Totana")
+}
