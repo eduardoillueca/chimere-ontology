@@ -1,0 +1,636 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<rdf:RDF
+	xmlns="https://raw.githubusercontent.com/eduardoillueca/chimere-ontology/main/Ontology/chimere-ontology.owl#"
+	xmlns:wgs="http://www.w3.org/2003/01/geo/wgs84_pos#"
+	xmlns:owl="http://www.w3.org/2002/07/owl#"
+	xmlns:gn="http://www.geonames.org/ontology#"
+	xmlns:xsd="http://www.w3.org/2001/XMLSchema#"
+	xmlns:rdfs="http://www.w3.org/2000/01/rdf-schema#"
+	xmlns:Entities="https://raw.githubusercontent.com/eduardoillueca/chimere-ontology/main/Entities/"
+	xmlns:path="http://www.ontotext.com/path#"
+	xmlns:terms="http://purl.org/dc/terms/"
+	xmlns:rdf="http://www.w3.org/1999/02/22-rdf-syntax-ns#"
+	xmlns:chimere-ontology.owl="https://raw.githubusercontent.com/eduardoillueca/chimere-ontology/main/Ontology/chimere-ontology.owl#"
+	xmlns:obo="http://purl.obolibrary.org/obo/">
+
+<rdf:Description rdf:about="https://raw.githubusercontent.com/eduardoillueca/chimere-ontology/main/Ontology/chimere-ontology.owl">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Ontology"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/dc/terms/description">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/dc/terms/license">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.org/dc/terms/title">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/IAO_0000115">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#AnnotationProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://raw.githubusercontent.com/eduardoillueca/chimere-ontology/main/Entities/hasAirQualityIndex">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://smartdatamodels.org/dataModel.Environment/AirQualityForecast">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://smartdatamodels.org/dataModel.Environment/airQualityIndex">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://raw.githubusercontent.com/eduardoillueca/chimere-ontology/main/Entities/hasChemicalEntity">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://edamontology.org/data_2140">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_24431">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://raw.githubusercontent.com/eduardoillueca/chimere-ontology/main/Entities/hasConcentration">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://raw.githubusercontent.com/eduardoillueca/chimere-ontology/main/Entities/hasForecast">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/APOLLO_SV_00000070">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://raw.githubusercontent.com/eduardoillueca/chimere-ontology/main/Entities/hasMunicipality">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://raw.githubusercontent.com/eduardoillueca/chimere-ontology/main/Entities/hasPressure">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001025">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://raw.githubusercontent.com/eduardoillueca/chimere-ontology/main/Entities/hasTemperature">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://smartdatamodels.org/dataModel.Environment/temperature">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://raw.githubusercontent.com/eduardoillueca/chimere-ontology/main/Entities/hasTimestamp">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://raw.githubusercontent.com/eduardoillueca/chimere-ontology/main/Entities/hasUnit">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://raw.githubusercontent.com/eduardoillueca/chimere-ontology/main/Entities/hasValue">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://raw.githubusercontent.com/eduardoillueca/chimere-ontology/main/Entities/isResultOf">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#ObjectProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_16134">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_24835">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_16183">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_17245">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_72695">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_18422">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_23367">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_25812">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_33259">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_33101">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_35196">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_50803">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://smartdatamodels.org/dateObserved">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://smartdatamodels.org/dataModel.Environment/pm10">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://smartdatamodels.org/dataModel.Environment/pm25">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Class"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node4">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node5">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node6">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node7">
+	<rdf:type rdf:resource="http://www.w3.org/2002/07/owl#Restriction"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_16134">
+	<rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_24835"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_24835">
+	<rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_23367"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_16183">
+	<rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_24835"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_17245">
+	<rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_72695"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_72695">
+	<rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_23367"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_18422">
+	<rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_24835"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_23367">
+	<rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_24431"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_25812">
+	<rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_33259"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_33259">
+	<rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_23367"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_33101">
+	<rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_24835"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_35196">
+	<rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_24835"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_50803">
+	<rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_24431"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://smartdatamodels.org/dataModel.Environment/pm10">
+	<rdfs:subClassOf rdf:resource="http://purl.obolibrary.org/obo/CHEBI_50803"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://smartdatamodels.org/dataModel.Environment/pm25">
+	<rdfs:subClassOf rdf:resource="https://smartdatamodels.org/dataModel.Environment/pm10"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://raw.githubusercontent.com/eduardoillueca/chimere-ontology/main/Entities/hasAirQualityIndex">
+	<rdfs:domain rdf:resource="https://smartdatamodels.org/dataModel.Environment/AirQualityForecast"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://raw.githubusercontent.com/eduardoillueca/chimere-ontology/main/Entities/hasChemicalEntity">
+	<rdfs:domain rdf:resource="http://edamontology.org/data_2140"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://raw.githubusercontent.com/eduardoillueca/chimere-ontology/main/Entities/hasConcentration">
+	<rdfs:domain rdf:resource="https://smartdatamodels.org/dataModel.Environment/AirQualityForecast"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://raw.githubusercontent.com/eduardoillueca/chimere-ontology/main/Entities/hasForecast">
+	<rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/APOLLO_SV_00000070"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://raw.githubusercontent.com/eduardoillueca/chimere-ontology/main/Entities/hasMunicipality">
+	<rdfs:domain rdf:resource="https://smartdatamodels.org/dataModel.Environment/AirQualityForecast"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://raw.githubusercontent.com/eduardoillueca/chimere-ontology/main/Entities/hasPressure">
+	<rdfs:domain rdf:resource="https://smartdatamodels.org/dataModel.Environment/AirQualityForecast"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://raw.githubusercontent.com/eduardoillueca/chimere-ontology/main/Entities/hasTemperature">
+	<rdfs:domain rdf:resource="https://smartdatamodels.org/dataModel.Environment/AirQualityForecast"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://raw.githubusercontent.com/eduardoillueca/chimere-ontology/main/Entities/hasTimestamp">
+	<rdfs:domain rdf:resource="https://smartdatamodels.org/dataModel.Environment/AirQualityForecast"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://raw.githubusercontent.com/eduardoillueca/chimere-ontology/main/Entities/hasUnit">
+	<rdfs:domain rdf:resource="http://edamontology.org/data_2140"/>
+	<rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/PATO_0001025"/>
+	<rdfs:domain rdf:resource="https://smartdatamodels.org/dataModel.Environment/temperature"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://raw.githubusercontent.com/eduardoillueca/chimere-ontology/main/Entities/hasValue">
+	<rdfs:domain rdf:resource="http://edamontology.org/data_2140"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://raw.githubusercontent.com/eduardoillueca/chimere-ontology/main/Entities/isResultOf">
+	<rdfs:domain rdf:resource="http://edamontology.org/data_2140"/>
+	<rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/APOLLO_SV_00000070"/>
+	<rdfs:domain rdf:resource="http://purl.obolibrary.org/obo/PATO_0001025"/>
+	<rdfs:domain rdf:resource="https://smartdatamodels.org/dataModel.Environment/temperature"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://raw.githubusercontent.com/eduardoillueca/chimere-ontology/main/Entities/hasAirQualityIndex">
+	<rdfs:range rdf:resource="https://smartdatamodels.org/dataModel.Environment/airQualityIndex"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://raw.githubusercontent.com/eduardoillueca/chimere-ontology/main/Entities/hasChemicalEntity">
+	<rdfs:range rdf:resource="http://purl.obolibrary.org/obo/CHEBI_24431"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://raw.githubusercontent.com/eduardoillueca/chimere-ontology/main/Entities/hasConcentration">
+	<rdfs:range rdf:resource="http://edamontology.org/data_2140"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://raw.githubusercontent.com/eduardoillueca/chimere-ontology/main/Entities/hasForecast">
+	<rdfs:range rdf:resource="https://smartdatamodels.org/dataModel.Environment/AirQualityForecast"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://raw.githubusercontent.com/eduardoillueca/chimere-ontology/main/Entities/hasMunicipality">
+	<rdfs:range rdf:nodeID="node4"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://raw.githubusercontent.com/eduardoillueca/chimere-ontology/main/Entities/hasPressure">
+	<rdfs:range rdf:resource="http://purl.obolibrary.org/obo/PATO_0001025"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://raw.githubusercontent.com/eduardoillueca/chimere-ontology/main/Entities/hasTemperature">
+	<rdfs:range rdf:resource="https://smartdatamodels.org/dataModel.Environment/temperature"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://raw.githubusercontent.com/eduardoillueca/chimere-ontology/main/Entities/hasTimestamp">
+	<rdfs:range rdf:nodeID="node5"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://raw.githubusercontent.com/eduardoillueca/chimere-ontology/main/Entities/hasUnit">
+	<rdfs:range rdf:nodeID="node6"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://raw.githubusercontent.com/eduardoillueca/chimere-ontology/main/Entities/hasValue">
+	<rdfs:range rdf:nodeID="node7"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://raw.githubusercontent.com/eduardoillueca/chimere-ontology/main/Entities/isResultOf">
+	<rdfs:range rdf:resource="https://smartdatamodels.org/dataModel.Environment/AirQualityForecast"/>
+	<rdfs:range rdf:resource="http://purl.obolibrary.org/obo/APOLLO_SV_00000070"/>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://raw.githubusercontent.com/eduardoillueca/chimere-ontology/main/Entities/hasAirQualityIndex">
+	<rdfs:label>hasAirQualityIndex</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://smartdatamodels.org/dataModel.Environment/AirQualityForecast">
+	<rdfs:label>air quality forecast</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://smartdatamodels.org/dataModel.Environment/airQualityIndex">
+	<rdfs:label>air quality index</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://raw.githubusercontent.com/eduardoillueca/chimere-ontology/main/Entities/hasChemicalEntity">
+	<rdfs:label>hasChemicalEntity</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://edamontology.org/data_2140">
+	<rdfs:label>concentration</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_24431">
+	<rdfs:label>chemical entity</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://raw.githubusercontent.com/eduardoillueca/chimere-ontology/main/Entities/hasConcentration">
+	<rdfs:label>hasConcentration</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://raw.githubusercontent.com/eduardoillueca/chimere-ontology/main/Entities/hasForecast">
+	<rdfs:label>hasForecast</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/APOLLO_SV_00000070">
+	<rdfs:label>simulation</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://raw.githubusercontent.com/eduardoillueca/chimere-ontology/main/Entities/hasMunicipality">
+	<rdfs:label>hasMunicipality</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://raw.githubusercontent.com/eduardoillueca/chimere-ontology/main/Entities/hasPressure">
+	<rdfs:label>hasPressure</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001025">
+	<rdfs:label>pressure</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://raw.githubusercontent.com/eduardoillueca/chimere-ontology/main/Entities/hasTemperature">
+	<rdfs:label>hasTemperature</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://smartdatamodels.org/dataModel.Environment/temperature">
+	<rdfs:label>temperature</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://raw.githubusercontent.com/eduardoillueca/chimere-ontology/main/Entities/hasTimestamp">
+	<rdfs:label>hasTimestamp</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://raw.githubusercontent.com/eduardoillueca/chimere-ontology/main/Entities/hasUnit">
+	<rdfs:label>hasUnit</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://raw.githubusercontent.com/eduardoillueca/chimere-ontology/main/Entities/hasValue">
+	<rdfs:label>hasValue</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://raw.githubusercontent.com/eduardoillueca/chimere-ontology/main/Entities/isResultOf">
+	<rdfs:label>isResultOf</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_16134">
+	<rdfs:label>ammonia</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_24835">
+	<rdfs:label>inorganic molecular entity</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_16183">
+	<rdfs:label>methane</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_17245">
+	<rdfs:label>carbon monoxide</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_72695">
+	<rdfs:label>organic molecule</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_18422">
+	<rdfs:label>sulfur dioxide</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_23367">
+	<rdfs:label>molecular entity</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_25812">
+	<rdfs:label>ozone</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_33259">
+	<rdfs:label>elemental molecular entity</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_33101">
+	<rdfs:label>nitrogen dioxide</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_35196">
+	<rdfs:label>nitrogen oxide</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_50803">
+	<rdfs:label>nanoparticle</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://smartdatamodels.org/dateObserved">
+	<rdfs:label>date</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://smartdatamodels.org/dataModel.Environment/pm10">
+	<rdfs:label>PM10</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://smartdatamodels.org/dataModel.Environment/pm25">
+	<rdfs:label>PM2.5</rdfs:label>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://raw.githubusercontent.com/eduardoillueca/chimere-ontology/main/Ontology/chimere-ontology.owl">
+	<terms:description>Ontology describing the entities required to represent a CHIMERE simulation for a timestamp and a municipality (short version)</terms:description>
+	<terms:license>http://www.w3.org/Consortium/Legal/2015/copyright-software-and-document</terms:license>
+	<terms:title>CHIMERE Ontology</terms:title>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://raw.githubusercontent.com/eduardoillueca/chimere-ontology/main/Entities/hasAirQualityIndex">
+	<obo:IAO_0000115>A simulation or measurment has an air quality index for a municipality and timestamp indicating the status of the air according to the european air quality index.</obo:IAO_0000115>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://smartdatamodels.org/dataModel.Environment/AirQualityForecast">
+	<obo:IAO_0000115>A forecast of air quality conditions valid during a period.</obo:IAO_0000115>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://smartdatamodels.org/dataModel.Environment/airQualityIndex">
+	<obo:IAO_0000115>Air quality index is a number used to report the quality of the air on any given day.</obo:IAO_0000115>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://raw.githubusercontent.com/eduardoillueca/chimere-ontology/main/Entities/hasChemicalEntity">
+	<obo:IAO_0000115>A concentration value is associated with a chemical entity.</obo:IAO_0000115>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://edamontology.org/data_2140">
+	<obo:IAO_0000115>The concentration of a chemical compound.</obo:IAO_0000115>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_24431">
+	<obo:IAO_0000115>A chemical entity is a physical entity of interest in chemistry including molecular entities, parts thereof, and chemical substances.</obo:IAO_0000115>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://raw.githubusercontent.com/eduardoillueca/chimere-ontology/main/Entities/hasConcentration">
+	<obo:IAO_0000115>A simulation or measurement of a chemical specie has a concentration value.</obo:IAO_0000115>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://raw.githubusercontent.com/eduardoillueca/chimere-ontology/main/Entities/hasForecast">
+	<obo:IAO_0000115>A simulation has a forecast instance.</obo:IAO_0000115>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/APOLLO_SV_00000070">
+	<obo:IAO_0000115>A purely intentional entity that simulates an entity and its properties.</obo:IAO_0000115>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://raw.githubusercontent.com/eduardoillueca/chimere-ontology/main/Entities/hasMunicipality">
+	<obo:IAO_0000115>A simulation or measurement is located in an administrative municipality.</obo:IAO_0000115>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://raw.githubusercontent.com/eduardoillueca/chimere-ontology/main/Entities/hasPressure">
+	<obo:IAO_0000115>A simulation or measurement has an atmospheric pressure value.</obo:IAO_0000115>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/PATO_0001025">
+	<obo:IAO_0000115>A physical quality that inheres in a bearer by virtue of the bearer's amount of force per unit area it exerts.</obo:IAO_0000115>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://raw.githubusercontent.com/eduardoillueca/chimere-ontology/main/Entities/hasTemperature">
+	<obo:IAO_0000115>A simulation or measurement has an temperature value.</obo:IAO_0000115>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://smartdatamodels.org/dataModel.Environment/temperature">
+	<obo:IAO_0000115>Measured temperature.</obo:IAO_0000115>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://raw.githubusercontent.com/eduardoillueca/chimere-ontology/main/Entities/hasTimestamp">
+	<obo:IAO_0000115>A simulation or measurement has an associated timestamp in currentmillis.</obo:IAO_0000115>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://raw.githubusercontent.com/eduardoillueca/chimere-ontology/main/Entities/hasUnit">
+	<obo:IAO_0000115>A simulation or measurement value has a unit in the SI.</obo:IAO_0000115>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://raw.githubusercontent.com/eduardoillueca/chimere-ontology/main/Entities/hasValue">
+	<obo:IAO_0000115>A simulation or a measurement of a physical or chemical parameter has a numeric value.</obo:IAO_0000115>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://raw.githubusercontent.com/eduardoillueca/chimere-ontology/main/Entities/isResultOf">
+	<obo:IAO_0000115>A value is result of a simulation.</obo:IAO_0000115>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_16134">
+	<obo:IAO_0000115>An azane that consists of a single nitrogen atom covelently bonded to three hydrogen atoms.</obo:IAO_0000115>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_24835">
+	<obo:IAO_0000115>A molecular entity that contains no carbon.</obo:IAO_0000115>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_16183">
+	<obo:IAO_0000115>A one-carbon compound in which the carbon is attached by single bonds to four hydrogen atoms. It is a colourless, odourless, non-toxic but flammable gas (b.p. −161°C).</obo:IAO_0000115>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_17245">
+	<obo:IAO_0000115>A one-carbon compound in which the carbon is joined only to a single oxygen. It is a colourless, odourless, tasteless, toxic gas.</obo:IAO_0000115>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_72695">
+	<obo:IAO_0000115>Any molecule that consists of at least one carbon atom as part of the electrically neutral entity.</obo:IAO_0000115>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_18422">
+	<obo:IAO_0000115>A sulphur oxide composed by one sulphur atom and one oxygen atom.</obo:IAO_0000115>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_23367">
+	<obo:IAO_0000115>Any constitutionally or isotopically distinct atom, molecule, ion, ion pair, radical, radical ion, complex, conformer etc., identifiable as a separately distinguishable entity.</obo:IAO_0000115>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_25812">
+	<obo:IAO_0000115>An elemental molecule with formula O3. An explosive, pale blue gas (b.p. −112°C) that has a characteristic, pungent odour, it is continuously produced in the upper atmosphere by the action of solar ultraviolet radiation on atmospheric oxygen. It is an antimicrobial agent used in the production of bottled water, as well as in the treatment of meat, poultry and other foodstuffs.</obo:IAO_0000115>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_33259">
+	<obo:IAO_0000115>A molecular entity all atoms of which have the same atomic number.</obo:IAO_0000115>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_33101">
+	<obo:IAO_0000115>A nitrogen oxide composed by one nitrogen atom and two oxygen atom.</obo:IAO_0000115>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_35196">
+	<obo:IAO_0000115>A nitrogen oxide composed by one nitrogen atom and one oxygen atom.</obo:IAO_0000115>
+</rdf:Description>
+
+<rdf:Description rdf:about="http://purl.obolibrary.org/obo/CHEBI_50803">
+	<obo:IAO_0000115>A nanosized spherical or capsule-shaped structure.</obo:IAO_0000115>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://smartdatamodels.org/dateObserved">
+	<obo:IAO_0000115>The date and time of this observation represented by an ISO8601 interval. There are alternatives descriptions in other data models, please check it below if it fits you needs</obo:IAO_0000115>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://smartdatamodels.org/dataModel.Environment/pm10">
+	<obo:IAO_0000115>Particulate matter 10 micrometers or less in diameter</obo:IAO_0000115>
+</rdf:Description>
+
+<rdf:Description rdf:about="https://smartdatamodels.org/dataModel.Environment/pm25">
+	<obo:IAO_0000115>Particulate matter 2.5 micrometers or less in diameter</obo:IAO_0000115>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node4">
+	<owl:onProperty rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node5">
+	<owl:onProperty rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node6">
+	<owl:onProperty rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node7">
+	<owl:onProperty rdf:resource="http://www.w3.org/2002/07/owl#topDataProperty"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node4">
+	<owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node5">
+	<owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#int"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node6">
+	<owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#string"/>
+</rdf:Description>
+
+<rdf:Description rdf:nodeID="node7">
+	<owl:someValuesFrom rdf:resource="http://www.w3.org/2001/XMLSchema#float"/>
+</rdf:Description>
+
+</rdf:RDF>

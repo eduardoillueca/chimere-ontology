@@ -1,0 +1,211 @@
+@prefix : <https://raw.githubusercontent.com/eduardoillueca/chimere-ontology/main/Ontology/chimere-ontology.owl#> .
+@prefix wgs: <http://www.w3.org/2003/01/geo/wgs84_pos#> .
+@prefix owl: <http://www.w3.org/2002/07/owl#> .
+@prefix gn: <http://www.geonames.org/ontology#> .
+@prefix xsd: <http://www.w3.org/2001/XMLSchema#> .
+@prefix rdfs: <http://www.w3.org/2000/01/rdf-schema#> .
+@prefix Entities: <https://raw.githubusercontent.com/eduardoillueca/chimere-ontology/main/Entities/> .
+@prefix path: <http://www.ontotext.com/path#> .
+@prefix terms: <http://purl.org/dc/terms/> .
+@prefix rdf: <http://www.w3.org/1999/02/22-rdf-syntax-ns#> .
+@prefix obo: <http://purl.obolibrary.org/obo/> .
+
+<https://raw.githubusercontent.com/eduardoillueca/chimere-ontology/main/Ontology/chimere-ontology.owl>
+  a owl:Ontology;
+  terms:description "Ontology describing the entities required to represent a CHIMERE simulation for a timestamp and a municipality (short version)";
+  terms:license "http://www.w3.org/Consortium/Legal/2015/copyright-software-and-document";
+  terms:title "CHIMERE Ontology" .
+
+terms:description a owl:AnnotationProperty .
+
+terms:license a owl:AnnotationProperty .
+
+terms:title a owl:AnnotationProperty .
+
+obo:IAO_0000115 a owl:AnnotationProperty .
+
+Entities:hasAirQualityIndex a owl:ObjectProperty;
+  rdfs:domain <https://smartdatamodels.org/dataModel.Environment/AirQualityForecast>;
+  rdfs:range <https://smartdatamodels.org/dataModel.Environment/airQualityIndex>;
+  rdfs:label "hasAirQualityIndex";
+  obo:IAO_0000115 "A simulation or measurment has an air quality index for a municipality and timestamp indicating the status of the air according to the european air quality index." .
+
+<https://smartdatamodels.org/dataModel.Environment/AirQualityForecast> a owl:Class;
+  rdfs:label "air quality forecast";
+  obo:IAO_0000115 "A forecast of air quality conditions valid during a period." .
+
+<https://smartdatamodels.org/dataModel.Environment/airQualityIndex> a owl:Class;
+  rdfs:label "air quality index";
+  obo:IAO_0000115 "Air quality index is a number used to report the quality of the air on any given day." .
+
+Entities:hasChemicalEntity a owl:ObjectProperty;
+  rdfs:domain <http://edamontology.org/data_2140>;
+  rdfs:range obo:CHEBI_24431;
+  rdfs:label "hasChemicalEntity";
+  obo:IAO_0000115 "A concentration value is associated with a chemical entity." .
+
+<http://edamontology.org/data_2140> a owl:Class;
+  rdfs:label "concentration";
+  obo:IAO_0000115 "The concentration of a chemical compound." .
+
+obo:CHEBI_24431 a owl:Class;
+  rdfs:label "chemical entity";
+  obo:IAO_0000115 "A chemical entity is a physical entity of interest in chemistry including molecular entities, parts thereof, and chemical substances." .
+
+Entities:hasConcentration a owl:ObjectProperty;
+  rdfs:domain <https://smartdatamodels.org/dataModel.Environment/AirQualityForecast>;
+  rdfs:range <http://edamontology.org/data_2140>;
+  rdfs:label "hasConcentration";
+  obo:IAO_0000115 "A simulation or measurement of a chemical specie has a concentration value." .
+
+Entities:hasForecast a owl:ObjectProperty;
+  rdfs:domain obo:APOLLO_SV_00000070;
+  rdfs:range <https://smartdatamodels.org/dataModel.Environment/AirQualityForecast>;
+  rdfs:label "hasForecast";
+  obo:IAO_0000115 "A simulation has a forecast instance." .
+
+obo:APOLLO_SV_00000070 a owl:Class;
+  rdfs:label "simulation";
+  obo:IAO_0000115 "A purely intentional entity that simulates an entity and its properties." .
+
+Entities:hasMunicipality a owl:ObjectProperty;
+  rdfs:domain <https://smartdatamodels.org/dataModel.Environment/AirQualityForecast>;
+  rdfs:range _:node4;
+  rdfs:label "hasMunicipality";
+  obo:IAO_0000115 "A simulation or measurement is located in an administrative municipality." .
+
+Entities:hasPressure a owl:ObjectProperty;
+  rdfs:domain <https://smartdatamodels.org/dataModel.Environment/AirQualityForecast>;
+  rdfs:range obo:PATO_0001025;
+  rdfs:label "hasPressure";
+  obo:IAO_0000115 "A simulation or measurement has an atmospheric pressure value." .
+
+obo:PATO_0001025 a owl:Class;
+  rdfs:label "pressure";
+  obo:IAO_0000115 "A physical quality that inheres in a bearer by virtue of the bearer's amount of force per unit area it exerts." .
+
+Entities:hasTemperature a owl:ObjectProperty;
+  rdfs:domain <https://smartdatamodels.org/dataModel.Environment/AirQualityForecast>;
+  rdfs:range <https://smartdatamodels.org/dataModel.Environment/temperature>;
+  rdfs:label "hasTemperature";
+  obo:IAO_0000115 "A simulation or measurement has an temperature value." .
+
+<https://smartdatamodels.org/dataModel.Environment/temperature> a owl:Class;
+  rdfs:label "temperature";
+  obo:IAO_0000115 "Measured temperature." .
+
+Entities:hasTimestamp a owl:ObjectProperty;
+  rdfs:domain <https://smartdatamodels.org/dataModel.Environment/AirQualityForecast>;
+  rdfs:range _:node5;
+  rdfs:label "hasTimestamp";
+  obo:IAO_0000115 "A simulation or measurement has an associated timestamp in currentmillis." .
+
+Entities:hasUnit a owl:ObjectProperty;
+  rdfs:domain <http://edamontology.org/data_2140>, obo:PATO_0001025, <https://smartdatamodels.org/dataModel.Environment/temperature>;
+  rdfs:range _:node6;
+  rdfs:label "hasUnit";
+  obo:IAO_0000115 "A simulation or measurement value has a unit in the SI." .
+
+Entities:hasValue a owl:ObjectProperty;
+  rdfs:domain <http://edamontology.org/data_2140>;
+  rdfs:range _:node7;
+  rdfs:label "hasValue";
+  obo:IAO_0000115 "A simulation or a measurement of a physical or chemical parameter has a numeric value." .
+
+Entities:isResultOf a owl:ObjectProperty;
+  rdfs:domain <http://edamontology.org/data_2140>, obo:APOLLO_SV_00000070, obo:PATO_0001025,
+    <https://smartdatamodels.org/dataModel.Environment/temperature>;
+  rdfs:range <https://smartdatamodels.org/dataModel.Environment/AirQualityForecast>,
+    obo:APOLLO_SV_00000070;
+  rdfs:label "isResultOf";
+  obo:IAO_0000115 "A value is result of a simulation." .
+
+obo:CHEBI_16134 a owl:Class;
+  rdfs:subClassOf obo:CHEBI_24835;
+  rdfs:label "ammonia";
+  obo:IAO_0000115 "An azane that consists of a single nitrogen atom covelently bonded to three hydrogen atoms." .
+
+obo:CHEBI_24835 a owl:Class;
+  rdfs:subClassOf obo:CHEBI_23367;
+  rdfs:label "inorganic molecular entity";
+  obo:IAO_0000115 "A molecular entity that contains no carbon." .
+
+obo:CHEBI_16183 a owl:Class;
+  rdfs:subClassOf obo:CHEBI_24835;
+  rdfs:label "methane";
+  obo:IAO_0000115 "A one-carbon compound in which the carbon is attached by single bonds to four hydrogen atoms. It is a colourless, odourless, non-toxic but flammable gas (b.p. −161°C)." .
+
+obo:CHEBI_17245 a owl:Class;
+  rdfs:subClassOf obo:CHEBI_72695;
+  rdfs:label "carbon monoxide";
+  obo:IAO_0000115 "A one-carbon compound in which the carbon is joined only to a single oxygen. It is a colourless, odourless, tasteless, toxic gas." .
+
+obo:CHEBI_72695 a owl:Class;
+  rdfs:subClassOf obo:CHEBI_23367;
+  rdfs:label "organic molecule";
+  obo:IAO_0000115 "Any molecule that consists of at least one carbon atom as part of the electrically neutral entity." .
+
+obo:CHEBI_18422 a owl:Class;
+  rdfs:subClassOf obo:CHEBI_24835;
+  rdfs:label "sulfur dioxide";
+  obo:IAO_0000115 "A sulphur oxide composed by one sulphur atom and one oxygen atom." .
+
+obo:CHEBI_23367 a owl:Class;
+  rdfs:subClassOf obo:CHEBI_24431;
+  rdfs:label "molecular entity";
+  obo:IAO_0000115 "Any constitutionally or isotopically distinct atom, molecule, ion, ion pair, radical, radical ion, complex, conformer etc., identifiable as a separately distinguishable entity." .
+
+obo:CHEBI_25812 a owl:Class;
+  rdfs:subClassOf obo:CHEBI_33259;
+  rdfs:label "ozone";
+  obo:IAO_0000115 "An elemental molecule with formula O3. An explosive, pale blue gas (b.p. −112°C) that has a characteristic, pungent odour, it is continuously produced in the upper atmosphere by the action of solar ultraviolet radiation on atmospheric oxygen. It is an antimicrobial agent used in the production of bottled water, as well as in the treatment of meat, poultry and other foodstuffs." .
+
+obo:CHEBI_33259 a owl:Class;
+  rdfs:subClassOf obo:CHEBI_23367;
+  rdfs:label "elemental molecular entity";
+  obo:IAO_0000115 "A molecular entity all atoms of which have the same atomic number." .
+
+obo:CHEBI_33101 a owl:Class;
+  rdfs:subClassOf obo:CHEBI_24835;
+  rdfs:label "nitrogen dioxide";
+  obo:IAO_0000115 "A nitrogen oxide composed by one nitrogen atom and two oxygen atom." .
+
+obo:CHEBI_35196 a owl:Class;
+  rdfs:subClassOf obo:CHEBI_24835;
+  rdfs:label "nitrogen oxide";
+  obo:IAO_0000115 "A nitrogen oxide composed by one nitrogen atom and one oxygen atom." .
+
+obo:CHEBI_50803 a owl:Class;
+  rdfs:subClassOf obo:CHEBI_24431;
+  rdfs:label "nanoparticle";
+  obo:IAO_0000115 "A nanosized spherical or capsule-shaped structure." .
+
+<https://smartdatamodels.org/dateObserved> a owl:Class;
+  rdfs:label "date";
+  obo:IAO_0000115 "The date and time of this observation represented by an ISO8601 interval. There are alternatives descriptions in other data models, please check it below if it fits you needs" .
+
+<https://smartdatamodels.org/dataModel.Environment/pm10> a owl:Class;
+  rdfs:subClassOf obo:CHEBI_50803;
+  rdfs:label "PM10";
+  obo:IAO_0000115 "Particulate matter 10 micrometers or less in diameter" .
+
+<https://smartdatamodels.org/dataModel.Environment/pm25> a owl:Class;
+  rdfs:subClassOf <https://smartdatamodels.org/dataModel.Environment/pm10>;
+  rdfs:label "PM2.5";
+  obo:IAO_0000115 "Particulate matter 2.5 micrometers or less in diameter" .
+
+_:node4 a owl:Restriction;
+  owl:onProperty owl:topDataProperty;
+  owl:someValuesFrom xsd:string .
+
+_:node5 a owl:Restriction;
+  owl:onProperty owl:topDataProperty;
+  owl:someValuesFrom xsd:int .
+
+_:node6 a owl:Restriction;
+  owl:onProperty owl:topDataProperty;
+  owl:someValuesFrom xsd:string .
+
+_:node7 a owl:Restriction;
+  owl:onProperty owl:topDataProperty;
+  owl:someValuesFrom xsd:float .
